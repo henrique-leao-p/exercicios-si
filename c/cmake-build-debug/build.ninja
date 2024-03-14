@@ -106,6 +106,39 @@ build figurinhas.exe: CXX_EXECUTABLE_LINKER__figurinhas_Debug CMakeFiles/figurin
   TARGET_IMPLIB = libfigurinhas.dll.a
   TARGET_PDB = figurinhas.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target cofre
+
+
+#############################################
+# Order-only phony target for cofre
+
+build cmake_object_order_depends_target_cofre: phony || CMakeFiles/cofre.dir
+
+build CMakeFiles/cofre.dir/maratona-12-03-24/cofre.cpp.obj: CXX_COMPILER__cofre_unscanned_Debug C$:/Users/0063400/Desktop/exercicios-si/c/maratona-12-03-24/cofre.cpp || cmake_object_order_depends_target_cofre
+  DEP_FILE = CMakeFiles\cofre.dir\maratona-12-03-24\cofre.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\cofre.dir
+  OBJECT_FILE_DIR = CMakeFiles\cofre.dir\maratona-12-03-24
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target cofre
+
+
+#############################################
+# Link the executable cofre.exe
+
+build cofre.exe: CXX_EXECUTABLE_LINKER__cofre_Debug CMakeFiles/cofre.dir/maratona-12-03-24/cofre.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\cofre.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = cofre.exe
+  TARGET_IMPLIB = libcofre.dll.a
+  TARGET_PDB = cofre.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -134,6 +167,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build amigos: phony amigos.exe
 
+build cofre: phony cofre.exe
+
 build figurinhas: phony figurinhas.exe
 
 # =============================================================================
@@ -144,7 +179,7 @@ build figurinhas: phony figurinhas.exe
 #############################################
 # Folder: C:/Users/0063400/Desktop/exercicios-si/c/cmake-build-debug
 
-build all: phony amigos.exe figurinhas.exe
+build all: phony amigos.exe figurinhas.exe cofre.exe
 
 # =============================================================================
 # Built-in targets
