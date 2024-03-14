@@ -37,6 +37,7 @@ int main() {
         //it é o indice do elemento figurinha contido em carimbadas
         auto it = find(carimbadas.begin(), carimbadas.end(), figurinha);
         //carimbadas.end é o retorno caso o elemento figurinhas não esteja contido
+        cout << (it != carimbadas.end());
         if (it != carimbadas.end()) {
             /*carimbadas.erase(it);*/
             faltam--;
