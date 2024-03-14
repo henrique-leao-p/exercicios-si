@@ -1,28 +1,49 @@
 #include <iostream>
+#include <vector>
+#include <sstream>
+#include <algorithm>
 
+using namespace std;
 
-int main() {
-    int nPredios;
+vector<int> splitStringToInt(const string& input) {
+    vector<int> result;
+    istringstream ss(input);
+    string token;
 
-    std::cin >> nPredios;
-    int andares[nPredios];
-
-    int maiorDistancia = 0;
-
-    for (int i = 0; i < nPredios; i++) {
-        std::cin >> andares[i];
+    while (getline(ss, token, ' ')) {
+        result.push_back(stoi(token));
     }
 
+    return result;
+}
 
-    for (int i = 0; i < nPredios; i++) {
-        for (int j = i; j < nPredios; j++) {
-            if (andares[i] + andares[j] + (j - i) > maiorDistancia) {
-                maiorDistancia = andares[i] + andares[j] + ((j - i));
-            }
+int main() {
+    int N, C, M;
+    cin >> N >> C >> M;
+
+    cin.ignore(); // Ignora a quebra de linha anterior
+
+    string carimbadasInput;
+    getline(cin, carimbadasInput);
+    vector<int> carimbadas = splitStringToInt(carimbadasInput);
+
+    string compradasInput;
+    getline(cin, compradasInput);
+    vector<int> compradas = splitStringToInt(compradasInput);
+
+    int faltam = C;
+    //auto deduz o tipo, cont garante que o valor não seja alterado
+    for (const auto& figurinha : compradas) {
+        //it é o indice do elemento figurinha contido em carimbadas
+        auto it = find(carimbadas.begin(), carimbadas.end(), figurinha);
+        //carimbadas.end é o retorno caso o elemento figurinhas não esteja contido
+        if (it != carimbadas.end()) {
+            /*carimbadas.erase(it);*/
+            faltam--;
         }
     }
 
-    std::cout << maiorDistancia << std::endl;
+    cout << faltam << endl;
 
     return 0;
 }

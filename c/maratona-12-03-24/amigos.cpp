@@ -1,15 +1,19 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
     int nPredios;
 
-    std::cin >> nPredios;
+    cout << "amigos";
+    
+    cin >> nPredios;
     int andares[nPredios];
     int maiorDistancia = 0;
 
     for (int i = 0; i < nPredios; i++) {
       do{
-           std::cin >> andares[i];
+           cin >> andares[i];
        }while(andares[i] < 2 || andares[i] > 2000000);
     }
 

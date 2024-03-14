@@ -1,3 +1,4 @@
-C:/Users/0063400/Desktop/exercicios-si/c/cmake-build-debug/CMakeFiles/c.dir
+C:/Users/0063400/Desktop/exercicios-si/c/cmake-build-debug/CMakeFiles/amigos.dir
+C:/Users/0063400/Desktop/exercicios-si/c/cmake-build-debug/CMakeFiles/figurinhas.dir
 C:/Users/0063400/Desktop/exercicios-si/c/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/0063400/Desktop/exercicios-si/c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
